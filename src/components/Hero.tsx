@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="container sm:block hidden absolute inset-x-0  top-[300px] mx-auto">
           <Search />
         </div>
-        <div className="container absolute inset-x-0  top-[80px] mx-auto">
+        <div className="container absolute inset-x-0 sm:hidden block  top-[80px] mx-auto">
           <div className="flex p-3">
             <input
               type="text"
