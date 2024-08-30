@@ -1,14 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useEffect, useState } from "react";
-import axios from "axios";
-import Link from "next/link";
-import {
-  faBarcode,
-  faPhone,
-  faQrcode,
-  faServer,
-} from "@fortawesome/free-solid-svg-icons";
+
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Slider from "@/components/Slider";
+import NavigatorBar from "@/components/NavigatorBar";
+import Department from "@/components/Department";
+import NewArea from "@/components/NewArea";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -26,8 +25,22 @@ export default function Home() {
   }
 
   return (
-    <div className="sm:p-[30px] p-[15px] sm:h-screen container mx-auto">
-      lorem-hellowrld
+    <div className="h-full">
+      <Header />
+      <Hero />
+      <div className="container mx-auto mb-[10px] sm:block hidden">
+        <NavigatorBar />
+      </div>
+      <div className="container mx-auto sm:mb-[10px] sm:block hidden">
+        <Slider />
+      </div>
+      <div className="container mx-auto mb-[10px] p-2">
+        <Department  />
+      </div>
+      <div className="container mx-auto mb-[10px]  p-2">
+        <NewArea  />
+      </div>
+      
     </div>
   );
 }
